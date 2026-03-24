@@ -193,10 +193,18 @@ input {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: absolute;
+  right: 20px;
 }
 
 .theme-button:hover {
   background-color: #e9eef5;
+}
+
+#theme-icon {
+  width: 24px;
+  height: 24px;
+  padding: 0;
 }
 
 body.dark-mode .theme-button {
