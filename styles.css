@@ -1,0 +1,255 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+}
+
+body {
+  background-color: #f8fafc;
+  display: flex;
+  width: 1280px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  max-width: 850px;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 120px;
+  margin: 10px;
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2px;
+  color: #333;
+  font-size: 20px;
+}
+
+label {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-container label {
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.input-container input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.swap-button {
+  background-color: #f0f3f8;
+  border: 1px solid #dde3ea;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.swap-button:hover {
+  background-color: #e9eef5;
+  transform: scale(1.05) rotate(180deg); /* Efeito de rotação legal! */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.convert-button {
+  background-color: #2563eb; /* Azul vibrante */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.convert-button:hover {
+  background-color: #3b82f6;
+}
+
+.result {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.original-value,
+.converted-value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.value-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.flag-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #eee;
+  padding-right: 30px;
+}
+
+.result {
+  flex: 1;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+  .form-section {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding-right: 0;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.theme-button {
+  background-color: #f8fafc;
+  border: 1px solid #dde3ea;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-button:hover {
+  background-color: #e9eef5;
+}
+
+body.dark-mode .theme-button {
+  background-color: #f8fafc;
+  border-color: #dde3ea;
+}
+
+body.dark-mode .theme-button:hover {
+  background-color: #e9eef5;
+}
+
+/* Modo Escuro */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode main {
+  background-color: #1e1e1e;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode h1 {
+  color: #f1f5f9;
+}
+
+body.dark-mode label {
+  color: #cbd5e1;
+}
+
+body.dark-mode select,
+body.dark-mode input {
+  background-color: #334155;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+body.dark-mode .swap-button {
+  background-color: #334155;
+  border-color: #475569;
+  color: #f8fafc;
+}
+
+body.dark-mode .swap-button:hover {
+  background-color: #475569;
+}
+
+body.dark-mode .form-section {
+  border-right-color: #334155;
+}
+
+@media (max-width: 768px) {
+  body.dark-mode .form-section {
+    border-bottom-color: #334155;
+  }
+}

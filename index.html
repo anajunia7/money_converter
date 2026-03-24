@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Money Converter - AJ DevBoost</title>
+    <link rel="icon" href="assets/title-logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header style="display: flex; justify-content: center; align-items: center; position: relative; max-width: 850px; margin: 0 auto; width: 100%;">
+        <img src="assets/logo.png" alt="Logo do Conversor de Moedas" class="logo">
+        <button id="theme-toggle" class="theme-button" aria-label="Alternar tema" style="position: absolute; right: 20px;">
+            <img src="assets/dark-mode.png" alt="Modo escuro" id="theme-icon" style="width: 24px; height: 24px; padding: 0;">
+        </button>
+    </header>
+
+    <main>
+
+        <h1>Conversor de Moedas</h1>
+
+        <div class="content-wrapper">
+            <div class="form-section">
+                <section class="values">
+                    <div>
+                        <label for="from-currency">Converter <b>de</b></label>
+                        <select id="from-currency" class="currency-select" required>
+                            <option value="BRL" data-symbol="R$">🇧🇷 BRL - Brazilian Real</option>
+                            <option value="BTC" data-symbol="₿">₿ BTC - Bitcoin</option>
+                            <option value="CAD" data-symbol="C$">🇨🇦 CAD - Canadian Dollar</option>
+                            <option value="CNY" data-symbol="¥">🇨🇳 CNY - Chinese Yuan</option>
+                            <option value="EUR" data-symbol="€">🇪🇺 EUR - Euro</option>
+                            <option value="GBP" data-symbol="£">🇬🇧 GBP - British Pound</option>
+                            <option value="JPY" data-symbol="¥">🇯🇵 JPY - Japanese Yen</option>
+                            <option value="USD" data-symbol="$" selected>🇺🇸 USD - US Dollar</option>
+                        </select>
+                    </div>
+
+                    <button type="button" class="swap-button" aria-label="Inverter moedas">
+                        ⇅
+                    </button>
+
+                    <div>
+                        <label for="to-currency">Converter <b>para</b></label>
+                        <select id="to-currency" class="currency-select" required>
+                            <option value="BRL" data-symbol="R$">🇧🇷 BRL - Brazilian Real</option>
+                            <option value="BTC" data-symbol="₿">₿ BTC - Bitcoin</option>
+                            <option value="CAD" data-symbol="C$">🇨🇦 CAD - Canadian Dollar</option>
+                            <option value="CNY" data-symbol="¥">🇨🇳 CNY - Chinese Yuan</option>
+                            <option value="EUR" data-symbol="€" selected>🇪🇺 EUR - Euro</option>
+                            <option value="GBP" data-symbol="£">🇬🇧 GBP - British Pound</option>
+                            <option value="JPY" data-symbol="¥">🇯🇵 JPY - Japanese Yen</option>
+                            <option value="USD" data-symbol="$">🇺🇸 USD - US Dollar</option>
+                        </select>
+                    </div>
+
+                </section>
+
+                <div class="input-container">
+                    <label for="amount"><b>Valor:</b></label>
+                    <input id="amount" class="input-currency" type="text" inputmode="decimal" placeholder="1.000,00" />
+                </div>
+
+                <button class="convert-button" type="submit">⟳ Converter valor</button>
+            </div>
+
+            <section class="result" id="result-section" aria-live="polite">
+                <div class="original-value">
+                    <label>Valor original:</label>
+                    <div class="value-container">
+                        <img src="assets/usd.png" id="from-flag" class="flag-icon" alt="Moeda de origem">
+                        <p id="from-result">1.000,00 USD =</p>
+                    </div>
+                </div>
+                <div class="converted-value">
+                    <label>Valor convertido:</label>
+                    <div class="value-container">
+                        <img src="assets/eur.png" id="to-flag" class="flag-icon" alt="Moeda de destino">
+                        <p class="currency-result" id="to-result-value">0.00</p>
+                        <p class="currency-coin" id="to-result-currency">EUR</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <p>Desenvolvido por <a href="https://github.com/anajunia7">AJ DevBoost - Todos os Direitos Reservados</a></p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
