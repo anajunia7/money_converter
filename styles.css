@@ -96,12 +96,12 @@ input {
 
 .swap-button:hover {
   background-color: #e9eef5;
-  transform: scale(1.05) rotate(180deg); /* Efeito de rotação legal! */
+  transform: scale(1.05) rotate(180deg);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .convert-button {
-  background-color: #2563eb; /* Azul vibrante */
+  background-color: #2563eb;
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -185,7 +185,7 @@ input {
 .theme-button {
   background-color: #f8fafc;
   border: 1px solid #dde3ea;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   padding: 8px;
   border-radius: 50%;
